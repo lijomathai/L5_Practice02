@@ -4,6 +4,7 @@ import pyeapi
 pyeapi.load_config('eapi.conf')
 
 #-- to print the vlan name & vlan id on leaf1 !!
+
 connect = pyeapi.connect_to('leaf1')
 raw_cmd_result = connect.enable('show vlan')
 cmd_vlan_dict = raw_cmd_result[0]['result']['vlans']
@@ -15,8 +16,6 @@ for vlan in cmd_vlan_dict:
     print(vlan) #to print vlan ID
     # print(cmd_vlan_dict[vlan]['name']) #to print vlan name
     # print(f"VLAN ID of {vlan_id} with name {vlan_name}") #to print vlan ID with name
-
-    
 
 #-- End of script !!
 
