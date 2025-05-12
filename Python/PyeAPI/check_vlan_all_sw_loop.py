@@ -12,7 +12,7 @@ for switch in vlan_dict['switches']:
     raw_cmd_result = connect.enable('show vlan')
     cmd_vlan_dict = raw_cmd_result[0]['result']['vlans']
 
-#--- Script to check if VLAN 10 exist on all switches, if not proceed to add VLAN 10
+#--- Script to check if VLAN str("x") exist on all switches, if not proceed to add VLAN str("x")
 
     if str("20") not in cmd_vlan_dict:
         print(f"vlan-20 donot exist on {switch}!")
@@ -26,6 +26,6 @@ for switch in vlan_dict['switches']:
                 vlan_api.set_name(vlan_id, vlan_name)
                 break
     else:
-        print(f"vlan-10 exist on {switch}")
+        print(f"vlan-20 exist on {switch}")
 
 #-- End of script !!
