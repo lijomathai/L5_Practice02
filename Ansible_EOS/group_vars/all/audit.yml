@@ -1,0 +1,12 @@
+path: "{{lookup('env','PWD')}}"
+
+cli_to_collect: 
+  - show vlan
+  - show lldp neighbors 
+  - show ip interface brief
+  - show version | json
+  - show running-config
+
+validation: 
+  mode: 
+    loose: true

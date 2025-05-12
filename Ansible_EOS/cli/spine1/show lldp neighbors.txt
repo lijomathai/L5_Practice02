@@ -1,0 +1,16 @@
+Last table change time   : 0:21:14 ago
+Number of table inserts  : 8
+Number of table deletes  : 0
+Number of table drops    : 0
+Number of table age-outs : 0
+
+Port          Neighbor Device ID           Neighbor Port ID    TTL
+---------- ---------------------------- ---------------------- ---
+Et1           spine2.arista.lab            Ethernet1           120
+Et2           spine2.arista.lab            Ethernet2           120
+Et3           leaf1.arista.lab             Ethernet3           120
+Et4           leaf2.arista.lab             Ethernet3           120
+Et5           leaf3.arista.lab             Ethernet3           120
+Et6           leaf4.arista.lab             Ethernet3           120
+Et7           borderleaf1.arista.lab       Ethernet3           120
+Et8           borderleaf2.arista.lab       Ethernet3           120

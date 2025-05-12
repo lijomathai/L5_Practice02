@@ -1,0 +1,3 @@
+banner motd
+"This is secured environment, restricted access!
+Unauthorised login is strictly prohibited and will be subjected to legal actions!"

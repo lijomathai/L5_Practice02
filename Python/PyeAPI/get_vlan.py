@@ -8,14 +8,15 @@ pyeapi.load_config('eapi.conf')
 connect = pyeapi.connect_to('leaf1')
 raw_cmd_result = connect.enable('show vlan')
 cmd_vlan_dict = raw_cmd_result[0]['result']['vlans']
-# print(cmd_vlan_dict[vlan])
+# print(cmd_vlan_dict) 
+
 
 for vlan in cmd_vlan_dict:
     vlan_id = vlan
     vlan_name = cmd_vlan_dict[vlan]['name']
-    print(vlan) #to print vlan ID
+    # print(f"VLAN {vlan} has interfaces {Intf_name}") #to print vlan ID
     # print(cmd_vlan_dict[vlan]['name']) #to print vlan name
-    # print(f"VLAN ID of {vlan_id} with name {vlan_name}") #to print vlan ID with name
+    print(f"VLAN ID of {vlan_id} with name {vlan_name}") #to print vlan ID with name
 
 #-- End of script !!
 

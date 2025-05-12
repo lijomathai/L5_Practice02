@@ -1,0 +1,9 @@
+VLAN  Name                             Status    Ports
+----- -------------------------------- --------- -------------------------------
+1     default                          active    Et1, Et2, Et3, Et4, Et5, Et6
+                                                 Et7, Et8, Et9, Et10
+10    DMZ                              active    
+20    Internal                         active    
+30    Sales                            active    
+40    QA                               active    
+50    Guest                            active
