@@ -1,0 +1,18 @@
+hostname: spine2
+loopback: 172.16.1.2
+as: 65101
+topology:
+  - interface: Ethernet3
+    lldp_neighbor: leaf1
+    lldp_neighbor_interface: Ethernet4
+    ip: 10.10.10.3
+    subnet: 31
+    ebgp_peer_ip: 10.10.10.2
+    ebgp_peer_loopback: 172.16.0.1 
+  - interface: Ethernet4
+    lldp_neighbor: leaf2
+    lldp_neighbor_interface: Ethernet4
+    ip: 10.10.10.11
+    subnet: 31
+    ebgp_peer_ip: 10.10.10.10
+    ebgp_peer_loopback: 172.16.0.2

@@ -1,0 +1,42 @@
+---
+- name: configure leaf1
+  hosts: leaf1
+  gather_facts: false
+  connection: httpapi
+
+  tasks:
+    - name: Apply the hostname
+      arista.eos.eos_hostname:
+        config:
+          hostname: "{{hostname}}"
+        state: merged
+    
+    - name: Configure Loopback0
+      arista.eos.eos_l3_interfaces:
+        config:
+          - name: "loopback0"
+            ipv4:
+              - address: "{{loopback}}"
+        state: merged
+
+    - name: Configure Physical Interfaces
+      arista.eos.eos_interfaces:
+        config:
+          - name: "{{ interface1 }}"
+            enabled: true
+            mode: layer3
+          - name: "{{ interface2 }}"
+            enabled: true
+            mode: layer3
+        state: merged
+
+    - name: Configure IP in Ethernet Interfaces
+      arista.eos.eos_l3_interfaces:
+        config:
+          - name: "{{ interface1 }}"
+            ipv4:
+              - address: "{{ ip1 }}"
+          - name: "{{ interface2 }}"
+            ipv4:
+              - address: "{{ ip2 }}"
+        state: merged

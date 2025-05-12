@@ -1,0 +1,16 @@
+version: 4.22.4M-2GB
+model: DCS-7150S-64-CL-F
+
+vlans: 
+  - vlan_id: 10
+    name: red
+  - vlan_id: 20 
+    name: blue
+  - vlan_id: 30
+    name: yellow
+  - vlan_id: 40
+
+login_banner: |
+   WARNING: This is a multi lines login banner
+            This is the one line of banner text. 
+            This is the another line of banner text. 

@@ -1,0 +1,15 @@
+hostname: leaf1
+loopback: 172.16.0.1/32
+as: 65001
+interface1: Ethernet3
+lldp_neighbor1: spine1
+lldp_neighbor_interface1: Ethernet3
+ip1: 10.10.10.0/31
+ebgp_peer_ip1: 10.10.10.1
+ebgp_peer_loopback1: 172.16.1.1 
+interface2: Ethernet4
+lldp_neighbor2: spine2
+lldp_neighbor_interface2: Ethernet3
+ip2: 10.10.10.2/31
+ebgp_peer_ip2: 10.10.10.3
+ebgp_peer_loopback2: 172.16.1.2
